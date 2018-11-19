@@ -1,7 +1,7 @@
 ﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
-
+/RussLib/.vs
 /RussLib/bin/Debug
 /RussLib/.vs/RussLib/v15/Server/sqlite3
 /RussLib/obj
