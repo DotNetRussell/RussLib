@@ -23,6 +23,8 @@ namespace RussLib.Pages
     /// </summary>
     public sealed partial class AboutPage : Page
     {
+        public static bool DisableBackButton { get; set; }
+
         public AboutPage()
         {
             this.InitializeComponent();
@@ -46,6 +48,11 @@ namespace RussLib.Pages
                     PART_NavigationPanel.Visibility = Visibility.Collapsed;
                     break;
             }
+
+            if(DisableBackButton)
+            {
+                BackButton.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void OnBackButtonClicked(object sender, BackRequestedEventArgs e)
@@ -58,7 +65,8 @@ namespace RussLib.Pages
 
         private void OnBackButtonClicked(object sender, RoutedEventArgs e)
         {
-            Frame.GoBack();
+            if(Frame.BackStack.Count > 0)
+                Frame.GoBack();
         }
     }
 }

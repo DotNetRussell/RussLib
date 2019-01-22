@@ -14,6 +14,7 @@
         </Grid.RowDefinitions>
         <StackPanel x:Name="PART_NavigationPanel" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left">
             <Button 
+                x:Name="BackButton"
                 Click="OnBackButtonClicked"
                 Foreground="{ThemeResource ResourceKey=SystemColorButtonTextColor}" 
                 Background="{ThemeResource ResourceKey=SystemColorHighlightColor}">
