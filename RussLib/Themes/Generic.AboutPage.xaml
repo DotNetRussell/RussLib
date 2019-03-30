@@ -35,48 +35,55 @@
                             FontSize="50"/>
                         <TextBlock 
                             x:Name="PART_Bio" VerticalAlignment="Top"
-                            Grid.Row="1" Grid.Column="1" FontSize="30" TextWrapping="Wrap"
+                            Grid.Row="1" Grid.Column="1" FontSize="20" TextWrapping="Wrap"
                             Text="Text place holder. Text place holder. Text place holder. Text place holder."/>
-                        <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="1">
-                            <StackPanel Orientation="Horizontal">
-                                <Image 
-                                    x:Name="PART_TwitterImage" Width="50" Margin="0,10,10,0"
-                                    Source="ms-appx:///RussLib/Images/Twitter_bird_icon.png" 
-                                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-                                <HyperlinkButton 
-                                    x:Name="PART_TwitterLink" FontSize="30" HorizontalAlignment="Center"
+
+                        <Grid Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width=".5*" />
+                                <ColumnDefinition Width=".5*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Image Grid.Column="0"
+                                    x:Name="PART_TwitterImage" Width="30" Margin="0,10,10,0"
+                                    Source="ms-appx:///RussLib/Images/Twitter_bird_icon.png"  />
+                            <HyperlinkButton Grid.Column="1"
+                                    x:Name="PART_TwitterLink" FontSize="20"
                                     NavigateUri="http://www.twitter.com/dotnetrussell" 
                                     Content="@DotNetRussell"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <Viewbox MaxWidth="50" Margin="0,10,10,0">
-                                    <SymbolIcon Symbol="Message"/>
-                                </Viewbox>
-                                <HyperlinkButton 
-                                    x:Name="PART_BlogLink" FontSize="30" HorizontalAlignment="Center"
+
+                            <Viewbox MaxWidth="20" Margin="0,10,10,0" Grid.Column="0" Grid.Row="1">
+                                <SymbolIcon Symbol="Message"/>
+                            </Viewbox>
+                            <HyperlinkButton Grid.Column="1" Grid.Row="1"
+                                    x:Name="PART_BlogLink" FontSize="20" 
                                     NavigateUri="http://www.DotNetRussell.com" 
                                     Content="DotNetRussell.com"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <Viewbox MaxWidth="50" Margin="0,10,10,0">
-                                    <SymbolIcon Symbol="Favorite"/>
-                                </Viewbox>
-                                <HyperlinkButton 
-                                    x:Name="PART_RateReviewButton" 
-                                    FontSize="30" HorizontalAlignment="Center"
-                                    Content="Rate and Review"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <Viewbox MaxWidth="50" Margin="0,10,10,0">
-                                    <SymbolIcon Symbol="Mail"/>
-                                </Viewbox>
-                                <HyperlinkButton 
-                                    x:Name="PART_Feedback" 
-                                    FontSize="30" HorizontalAlignment="Center"
-                                    Content="Leave me Feedback"/>
-                            </StackPanel>
 
-                        </StackPanel>
+                            <Viewbox MaxWidth="30" Margin="0,10,10,0" Grid.Column="0" Grid.Row="2">
+                                <SymbolIcon Symbol="Favorite"/>
+                            </Viewbox>
+                            <HyperlinkButton Grid.Column="1" Grid.Row="2"
+                                    x:Name="PART_RateReviewButton" 
+                                    FontSize="20"
+                                    Content="Rate and Review"/>
+
+                            <Viewbox MaxWidth="30" Margin="0,10,10,0" Grid.Column="0" Grid.Row="3">
+                                <SymbolIcon Symbol="Mail"/>
+                            </Viewbox>
+                            <HyperlinkButton Grid.Column="1" Grid.Row="3"
+                                    x:Name="PART_Feedback" 
+                                    FontSize="20" 
+                                    Content="Leave me Feedback"/>
+                        </Grid>
+
                         <basecontrols:RateReminder Grid.Row="0" Grid.Column="0"
                                                    Grid.RowSpan="3" Grid.ColumnSpan="2"
                                                    x:Name="PART_RateReminder" />

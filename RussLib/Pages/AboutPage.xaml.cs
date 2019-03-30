@@ -45,13 +45,13 @@ namespace RussLib.Pages
                     break;
                 case (DeviceType.Mobile):
                     PART_Content.Content = new AboutPageMobile();
-                    PART_NavigationPanel.Visibility = Visibility.Collapsed;
+                    //PART_NavigationPanel.Visibility = Visibility.Collapsed;
                     break;
             }
 
             if(DisableBackButton)
             {
-                BackButton.Visibility = Visibility.Collapsed;
+              //  BackButton.Visibility = Visibility.Collapsed;
             }
         }
 
